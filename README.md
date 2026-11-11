@@ -1,6 +1,15 @@
-# Felucca
+# UNIVERSYNTH
 
 [![License: GPL-3.0-only](https://img.shields.io/badge/license-GPL--3.0--only-blue.svg)](LICENSE)
+[![Build UNIVERSYNTH .fwsc](https://github.com/futumixxx/universynth-fm1/actions/workflows/build-fwsc.yml/badge.svg)](https://github.com/futumixxx/universynth-fm1/actions/workflows/build-fwsc.yml)
+
+UNIVERSYNTH is a fork of [Felucca](https://github.com/hugelton/Felucca), open-source custom synthesizer
+firmware for the **M-VAVE FM-1**, by Leo Kuroshita / Hügelton Instruments. This fork only renames the
+splash screen and adds a CI workflow that builds an installable `.fwsc` on every push, using the public
+JieLi toolchain and the Apache-2.0 JieLi AC79 SDK (see `BUILDING.md`); the synthesis engines, UI and
+firmware logic are unmodified Felucca. GPL-3.0-only, same as upstream.
+
+---
 
 Felucca is open-source custom synthesizer firmware for the **M-VAVE FM-1**.
 
