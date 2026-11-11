@@ -276,6 +276,15 @@ static const preset_t WHEEL_PRESETS[] = {
     {"GOSPEL", {6, 0, 0, 0, 1, 60, 40, 2}, {0, 64, 127, 45}, 0, 0, FX(0, 0, 0, 40), PAT(6)},
     {"SOFT FLUTE", {1, 0, -2, 0, 0, 10, 0, 1}, {0, 64, 127, 55}, 0, 0, FX(0, 20, 15, 55), PAT(5)},
     {"ROCK DRIVE", {7, 0, 0, 0, 0, 70, 100, 2}, {0, 64, 127, 40}, 0, 0, FX(35, 0, 10, 25), PAT(4)},
+    /* UNIVERSYNTH bank: ported from the HTML sandbox's ADDITIVE (drawbar organ) presets */
+    {"HAMMOND B3 ORGAN", {15, 0, 0, 0, 2, 40, 25, 2}, {0, 64, 127, 35}, 0, 0, FX(0, 0, 5, 20), PAT(5)},
+    {"CHURCH ORGAN", {11, 2, 0, 2, 0, 5, 0, 0}, {0, 64, 127, 60}, 0, 0, FX(0, 30, 10, 60), PAT(5)},
+    {"HARMONIC BELL", {13, -4, 0, 6, 2, 70, 10, 1}, {0, 70, 0, 90}, 0, 0, FX(0, 10, 30, 55), PAT(7)},
+    {"PURE SINE STACK", {0, 0, 0, 0, 0, 0, 0, 0}, {0, 64, 127, 30}, 0, 0, FX(0, 0, 5, 10), PAT(6)},
+    {"PIPE ORGAN BASS", {14, 4, 0, -4, 0, 0, 0, 0}, {0, 40, 127, 20}, 0, 1, FX(0, 0, 0, 10), PAT(8)},
+    {"GLASSY HARMONICS", {8, -6, -2, 6, 2, 90, 0, 1}, {0, 30, 60, 60}, 0, 0, FX(0, 20, 20, 50), PAT(1)},
+    {"MELLOTRON ORGAN", {1, 0, 0, 0, 0, 10, 5, 0}, {0, 85, 110, 40}, 0, 0, FX(0, 25, 10, 30), PAT(5)},
+    {"ORGAN SWELL", {6, 0, 2, 0, 0, 5, 15, 1}, {20, 64, 127, 70}, 0, 0, FX(0, 10, 10, 45), PAT(5)},
 };
 
 static const engine_t ENG_WHEEL = {

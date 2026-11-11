@@ -215,6 +215,15 @@ static const preset_t LOFI_PRESETS[] = {
     {"WAVE LEAD", {0, 4, 92, 0, 0, 18, 0, 110}, {0, 70, 90, 30}, 0, 1, FX(0, 0, 40, 25), PAT(3)},
     /* STEP: 25 % pulse, DCY 34 = D7 (a 15-step decay over 0.5 s), REL ~54 ms of staircase after note-off */
     {"STEP LEAD", {4, 0, 40, 34, 0, 16, 0, 127}, {0, 64, 127, 55}, 0, 1, FX(0, 0, 40, 20), PAT(4)},
+    /* UNIVERSYNTH bank: ported from the HTML sandbox's 8-BIT CHIPTUNE presets */
+    {"GAME BOY PULSE", {0, 0, 64, 0, 0, 0, 0, 127}, {0, 60, 90, 30}, 0, 1, FX(0, 0, 20, 15), PAT(4)},
+    {"NES ARP", {1, 2, 0, 0, 0, 0, 2, 110}, {0, 50, 80, 25}, 0, 0, FX(0, 0, 20, 10), PAT(13)},
+    {"BITCRUSHED LEAD", {3, 2, 0, 70, 0, 25, 0, 90}, {0, 20, 75, 20}, 0, 0, FX(35, 10, 20, 15), PAT(3)},
+    {"ARCADE LASER", {0, 2, 0, 0, 110, 0, 0, 127}, {0, 5, 0, 10}, 0, 1, FX(0, 0, 30, 10), PAT(1)},
+    {"COMMODORE 64 BASS", {2, 0, 48, 0, 0, 0, 0, 70}, {0, 30, 55, 15}, 0, 1, FX(0, 0, 5, 5), PAT(2)},
+    {"CHIP NOISE SNARE", {0, 3, 0, 0, 0, 0, 0, 100}, {0, 5, 0, 8}, 0, 1, FX(0, 0, 0, 10), PAT(9)},
+    {"RETRO JUMP FX", {0, 2, 0, 0, 40, 0, 0, 127}, {0, 5, 0, 8}, 0, 1, FX(0, 0, 15, 5), PAT(1)},
+    {"4-BIT DIRTY LEAD", {0, 2, 0, 0, 0, 40, 0, 60}, {0, 25, 85, 20}, 0, 0, FX(20, 15, 20, 10), PAT(4)},
 };
 
 static const engine_t ENG_LOFI = {

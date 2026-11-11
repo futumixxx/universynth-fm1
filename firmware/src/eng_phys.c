@@ -233,6 +233,15 @@ static const preset_t PHYS_PRESETS[] = {
     /* SYMP: {MODEL, CHRD, BRIT, DAMP, SYMP, ACC, BUZZ, EXC} */
     {"DRONE STRING", {PM_SYMP, 127, 80, 88, 64, 100, 92, 0}, {0, 100, 127, 90}, 0, 0, FX(0, 10, 20, 50), PAT(3)},
     {"HARP", {PM_SYMP, 8, 62, 74, 60, 90, 0, 0}, {0, 100, 127, 80}, 0, 0, FX(0, 20, 20, 60), PAT(3)},
+    /* UNIVERSYNTH bank: ported from the HTML sandbox's PLUCK (Karplus-Strong) presets */
+    {"ACOUSTIC GUITAR", {PM_STRING, 60, 68, 76, 35, 95, 0, 5}, {0, 95, 127, 55}, 0, 0, FX(0, 15, 25, 35), PAT(3)},
+    {"HARP PLUCK", {PM_SYMP, 20, 60, 72, 70, 90, 0, 0}, {0, 100, 127, 75}, 0, 0, FX(0, 20, 30, 55), PAT(3)},
+    {"STEEL DRUM", {PM_MODAL, 90, 85, 50, 60, 95, 0, 35}, {0, 90, 127, 50}, 0, 0, FX(0, 10, 20, 35), PAT(7)},
+    {"DAMPED BASS", {PM_STRING, 40, 30, 110, 15, 90, 0, 0}, {0, 80, 127, 35}, 0, 1, FX(0, 0, 5, 10), PAT(2)},
+    {"KOTO ZITHER", {PM_STRING, 70, 55, 68, 50, 92, 0, 0}, {0, 95, 127, 60}, 0, 0, FX(0, 20, 25, 40), PAT(3)},
+    {"KALIMBA BOX", {PM_MODAL, 30, 14, 58, 100, 88, 0, 45}, {0, 98, 127, 58}, 0, 0, FX(0, 15, 25, 45), PAT(7)},
+    {"ELECTRIC BASS PLUCK", {PM_STRING, 55, 48, 72, 28, 95, 0, 10}, {0, 85, 127, 42}, 0, 1, FX(10, 0, 10, 15), PAT(3)},
+    {"BANJO LEAD", {PM_STRING, 85, 92, 60, 20, 98, 0, 20}, {0, 100, 127, 45}, 0, 0, FX(0, 10, 20, 30), PAT(4)},
 };
 
 static const engine_t ENG_PHYS = {
