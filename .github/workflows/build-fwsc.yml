@@ -21,7 +21,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install Python build deps
-        run: pip3 install Pillow
+        run: pip3 install Pillow fonttools
 
       - name: Install the JieLi Linux toolchain (clang for pi32v2)
         run: |
