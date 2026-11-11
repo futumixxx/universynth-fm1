@@ -56,7 +56,7 @@ PALETTES = [
     # 1.8: its primary and secondary GREY's red and blue (were white)
     ("MONO",   (0, 0, 0),       (255, 255, 255), (255, 255, 255), RED,       (72, 140, 255)),
     # UNIVERSYNTH: the HTML sandbox's cosmic theme (space.void background, cosmic.cyan / cosmic.purple)
-    ("COSMIC", (5, 7, 14),      (0, 240, 255),   (226, 240, 248), RED,       (168, 85, 247)),
+    ("COSMIC", (5, 7, 14),      (0, 240, 255),   (226, 240, 248), RED,       (196, 140, 255)),
 ]
 BW = "MONO"
 BW_GREY = (82, 82, 82)             # MONO's one mid grey (RGB565 10/20/10): DIM LINE RAISE LANE
