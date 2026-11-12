@@ -8,20 +8,30 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Felucca Editor</title>
+<title>UNIVERSYNTH Editor</title>
 <style>
   /* Fukiai: Hügelton Instruments' icon font (MIT, FUKIAI-LICENSE.txt). Icons are text in .ic spans;
      they stay hidden until the face has loaded (html.fk), so a missing font never shows boxes. */
   @font-face { font-family: "Fukiai"; src: url("fukiai.ttf") format("truetype"); font-display: block; unicode-range: U+EA00-EB09; }
-  :root { --bg: #fff; --fg: #000; --dim: #777; --line: #ccc; }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) { --bg: #000; --fg: #fff; --dim: #888; --line: #444; }
+  /* UNIVERSYNTH cosmic theme: the HTML sandbox's cyan/purple on a deep space background.
+     Only these custom-property values and the body background changed; every rule below is
+     Felucca's own editor, untouched, so the MIDI/SysEx logic stays exactly as upstream. */
+  :root {
+    --bg: #05070e; --fg: #e9f7ff; --dim: #8ea8c3; --line: #2a3350;
+    --cyan: #00f0ff; --purple: #a855f7;
   }
-  :root[data-theme="dark"] { --bg: #000; --fg: #fff; --dim: #888; --line: #444; }
-  html { color-scheme: light dark; }
+  html { color-scheme: dark; }
   body { margin: 0; background: var(--bg); color: var(--fg);
+         background-image:
+           radial-gradient(circle at 15% 15%, rgba(168, 85, 247, 0.14) 0%, transparent 45%),
+           radial-gradient(circle at 85% 85%, rgba(0, 240, 255, 0.14) 0%, transparent 45%);
+         background-attachment: fixed;
          font: 13px/1.4 -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
          font-variant-numeric: tabular-nums; }
+  h1, h2 { color: var(--cyan); text-shadow: 0 0 10px rgba(0, 240, 255, .35); }
+  button:not(:disabled) { background: linear-gradient(135deg, var(--purple), var(--cyan)); color: #05070e; font-weight: 600; }
+  .tabs button[aria-selected="true"] { background: linear-gradient(135deg, var(--purple), var(--cyan)); color: #05070e; }
+  .list tr.sel td { background: var(--purple); color: #05070e; }
   main { max-width: 1100px; margin: 0 auto; padding: 16px; }
   h1 { font-size: 18px; font-weight: 600; margin: 0 0 8px; }
   h2 { font-size: 13px; font-weight: 600; margin: 0 0 4px; padding-bottom: 2px; border-bottom: 1px solid var(--fg); }
@@ -157,7 +167,7 @@
 <body>
 <main>
   <button class="lang" id="lang"></button>
-  <h1>Felucca Editor</h1>
+  <h1>UNIVERSYNTH Editor <span class="dim" style="font-size:11px;font-weight:400">(Felucca-based)</span></h1>
   <p class="dim"><a href="../installer/" style="color:inherit" data-t="installer"></a></p>
   <!-- always visible: connection, version, sync mode, the tabs and (Sound / Sequencer / Tracks) the track selector -->
   <header class="top">
