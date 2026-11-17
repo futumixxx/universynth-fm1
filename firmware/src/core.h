@@ -35,9 +35,11 @@
 #if FELUCCA_ADPCM && !FELUCCA_SLICE
 #error "FELUCCA_ADPCM needs FELUCCA_SLICE (ADPCM is engine 14, after SLICE)"
 #endif
-#define NENGINES (13 + FELUCCA_SLICE + FELUCCA_ADPCM)   /* SLICE (13), then ADPCM (14): the other engines keep their
-                                                         * numbers */
+#define NENGINES (13 + FELUCCA_SLICE + FELUCCA_ADPCM + 1)   /* SLICE (13), then ADPCM (14), then UNIVERSYNTH's own
+                                                             * FM6X (always built, always last): the other engines
+                                                             * keep their numbers */
 #define ENGI_ADPCM 14u
+#define ENGI_FM6X (NENGINES - 1u)   /* always the last engine number, whatever SLICE / ADPCM add before it */
 #define ENGI_DIGITAL 1u          /* reserved without FELUCCA_FM4: never selectable (eng_ok), its sounds load as FM6 */
 #define NENG_SHOWN (NENGINES - !FELUCCA_FM4)   /* the engines one can pick: PRESETS, the EDIT layer, the editor,
                                                 * in the display order of engines.c ENGINE_ORDER */
