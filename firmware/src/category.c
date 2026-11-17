@@ -40,6 +40,8 @@ static const char *const PRESET_CAT[16] = {
                                   * NOISE HAT */
 #endif
     "KBLPBK",                    /* ENGI_FM6X: DX E-PIANO, METAL BELL, FM BRASS, GLASS PAD, FM BASS, ORGAN STACK */
+    "LPLUPLBO",                  /* ENGI_WAVEX: DIGITAL SWEEP, MORPHING PAD, METALLIC LEAD, SUB WOBBLE, ALIEN MOTION,
+                                  * GLASS MORPH LEAD, RESO SWEEP BASS, CYBERPUNK DRONE */
 };
 static uint32_t preset_cat(uint32_t e, uint32_t k)    /* factory preset k of engine e */
 {

@@ -47,7 +47,8 @@ static uint8_t eng_mem_owner[NPART];       /* engine index + 1 whose state is in
 #if FELUCCA_ADPCM
 #include "eng_adpcm.c"           /* ADPCM: BRR waves and an FIR echo, its DSP ported from snes_spc (adpcm_dsp.c, LGPL-2.1+) */
 #endif
-#include "eng_fm6x.c"            /* FM6X: UNIVERSYNTH's own 6-operator FM engine, always built, always last */
+#include "eng_fm6x.c"            /* FM6X: UNIVERSYNTH's own 6-operator FM engine, always built */
+#include "eng_wavex.c"           /* WAVEX: UNIVERSYNTH's own wavetable-morph engine, always built, always last */
 
 /* the editor protocol, user presets and projects store these indices: append, never reorder */
 static const engine_t *const ENGINES[NENGINES] = {
@@ -74,7 +75,8 @@ static const engine_t *const ENGINES[NENGINES] = {
 #if FELUCCA_ADPCM
     &ENG_ADPCM,                  /* 14 (ENGI_ADPCM; FELUCCA_ADPCM=0 builds without it) */
 #endif
-    &ENG_FM6X,                   /* ENGI_FM6X: UNIVERSYNTH's own, always last */
+    &ENG_FM6X,                   /* ENGI_FM6X: UNIVERSYNTH's own */
+    &ENG_WAVEX,                  /* ENGI_WAVEX: UNIVERSYNTH's own, always last */
 };
 
 /* a track's engine number as an index (the audio paths: a compare, cheaper than % NENGINES; a bad number: 0) */
@@ -138,7 +140,8 @@ static const uint8_t ENGINE_ORDER[NENG_SHOWN] = {
 #if FELUCCA_ADPCM
     14,                          /* ADPCM (1.8): off the EDIT layer's white keys (ui_layer.c LY_ENG_KEYS keeps the 13 above) */
 #endif
-    ENGI_FM6X,                   /* UNIVERSYNTH's own FM6X: also off the white keys, same as ADPCM, selectable by knob */
+    ENGI_FM6X,                   /* UNIVERSYNTH's own FM6X: off the white keys, same as ADPCM, selectable by knob */
+    ENGI_WAVEX,                  /* UNIVERSYNTH's own WAVEX: likewise */
 };
 
 /* the engines one can pick (engine 1 only with FELUCCA_FM4), in ENGINE_ORDER: eng_ok(e), the n-th of them
